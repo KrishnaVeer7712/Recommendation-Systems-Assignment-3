@@ -1,0 +1,923 @@
+
+                  <head>
+                      <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/df_style.css') }}">
+                  </head>
+                  <body>
+                    <table border="1" class="dataframe mystyle">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>Target</th>
+      <th>IDs</th>
+      <th>Date</th>
+      <th>Flag</th>
+      <th>User</th>
+      <th>TweetText</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>1467810672</td>
+      <td>Mon Apr 06 22:19:49 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>scotthamilton</td>
+      <td>is upset that he can't update his Facebook by texting it... and might cry as a result  School today also. Blah!</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>1467810917</td>
+      <td>Mon Apr 06 22:19:53 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>mattycus</td>
+      <td>@Kenichan I dived many times for the ball. Managed to save 50%  The rest go out of bounds</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>1467811184</td>
+      <td>Mon Apr 06 22:19:57 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>ElleCTF</td>
+      <td>my whole body feels itchy and like its on fire</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>1467811193</td>
+      <td>Mon Apr 06 22:19:57 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>Karoli</td>
+      <td>@nationwideclass no, it's not behaving at all. i'm mad. why am i here? because I can't see you all over there.</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>1467811372</td>
+      <td>Mon Apr 06 22:20:00 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>joy_wolf</td>
+      <td>@Kwesidei not the whole crew</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0</td>
+      <td>1467811592</td>
+      <td>Mon Apr 06 22:20:03 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>mybirch</td>
+      <td>Need a hug</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0</td>
+      <td>1467811594</td>
+      <td>Mon Apr 06 22:20:03 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>coZZ</td>
+      <td>@LOLTrish hey  long time no see! Yes.. Rains a bit ,only a bit  LOL , I'm fine thanks , how's you ?</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0</td>
+      <td>1467811795</td>
+      <td>Mon Apr 06 22:20:05 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>2Hood4Hollywood</td>
+      <td>@Tatiana_K nope they didn't have it</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0</td>
+      <td>1467812025</td>
+      <td>Mon Apr 06 22:20:09 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>mimismo</td>
+      <td>@twittera que me muera ?</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>0</td>
+      <td>1467812416</td>
+      <td>Mon Apr 06 22:20:16 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>erinx3leannexo</td>
+      <td>spring break in plain city... it's snowing</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0</td>
+      <td>1467812579</td>
+      <td>Mon Apr 06 22:20:17 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>pardonlauren</td>
+      <td>I just re-pierced my ears</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>0</td>
+      <td>1467812723</td>
+      <td>Mon Apr 06 22:20:19 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>TLeC</td>
+      <td>@caregiving I couldn't bear to watch it.  And I thought the UA loss was embarrassing . . . . .</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0</td>
+      <td>1467812771</td>
+      <td>Mon Apr 06 22:20:19 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>robrobbierobert</td>
+      <td>@octolinz16 It it counts, idk why I did either. you never talk to me anymore</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0</td>
+      <td>1467812784</td>
+      <td>Mon Apr 06 22:20:20 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>bayofwolves</td>
+      <td>@smarrison i would've been the first, but i didn't have a gun.    not really though, zac snyder's just a doucheclown.</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>0</td>
+      <td>1467812799</td>
+      <td>Mon Apr 06 22:20:20 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>HairByJess</td>
+      <td>@iamjazzyfizzle I wish I got to watch it with you!! I miss you and @iamlilnicki  how was the premiere?!</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>0</td>
+      <td>1467812964</td>
+      <td>Mon Apr 06 22:20:22 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>lovesongwriter</td>
+      <td>Hollis' death scene will hurt me severely to watch on film  wry is directors cut not out now?</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>0</td>
+      <td>1467813137</td>
+      <td>Mon Apr 06 22:20:25 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>armotley</td>
+      <td>about to file taxes</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>0</td>
+      <td>1467813579</td>
+      <td>Mon Apr 06 22:20:31 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>starkissed</td>
+      <td>@LettyA ahh ive always wanted to see rent  love the soundtrack!!</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>0</td>
+      <td>1467813782</td>
+      <td>Mon Apr 06 22:20:34 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>gi_gi_bee</td>
+      <td>@FakerPattyPattz Oh dear. Were you drinking out of the forgotten table drinks?</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>0</td>
+      <td>1467813985</td>
+      <td>Mon Apr 06 22:20:37 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>quanvu</td>
+      <td>@alydesigns i was out most of the day so didn't get much done</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>0</td>
+      <td>1467813992</td>
+      <td>Mon Apr 06 22:20:38 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>swinspeedx</td>
+      <td>one of my friend called me, and asked to meet with her at Mid Valley today...but i've no time *sigh*</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>0</td>
+      <td>1467814119</td>
+      <td>Mon Apr 06 22:20:40 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>cooliodoc</td>
+      <td>@angry_barista I baked you a cake but I ated it</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>0</td>
+      <td>1467814180</td>
+      <td>Mon Apr 06 22:20:40 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>viJILLante</td>
+      <td>this week is not going as i had hoped</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>0</td>
+      <td>1467814192</td>
+      <td>Mon Apr 06 22:20:41 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>Ljelli3166</td>
+      <td>blagh class at 8 tomorrow</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>0</td>
+      <td>1467814438</td>
+      <td>Mon Apr 06 22:20:44 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>ChicagoCubbie</td>
+      <td>I hate when I have to call and wake people up</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>0</td>
+      <td>1467814783</td>
+      <td>Mon Apr 06 22:20:50 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>KatieAngell</td>
+      <td>Just going to cry myself to sleep after watching Marley and Me.</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>0</td>
+      <td>1467814883</td>
+      <td>Mon Apr 06 22:20:52 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>gagoo</td>
+      <td>im sad now  Miss.Lilly</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>0</td>
+      <td>1467815199</td>
+      <td>Mon Apr 06 22:20:56 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>abel209</td>
+      <td>ooooh.... LOL  that leslie.... and ok I won't do it again so leslie won't  get mad again</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>0</td>
+      <td>1467815753</td>
+      <td>Mon Apr 06 22:21:04 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>BaptisteTheFool</td>
+      <td>Meh... Almost Lover is the exception... this track gets me depressed every time.</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>0</td>
+      <td>1467815923</td>
+      <td>Mon Apr 06 22:21:07 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>fatkat309</td>
+      <td>some1 hacked my account on aim  now i have to make a new one</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>0</td>
+      <td>1467815924</td>
+      <td>Mon Apr 06 22:21:07 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>EmCDL</td>
+      <td>@alielayus I want to go to promote GEAR AND GROOVE but unfornately no ride there  I may b going to the one in Anaheim in May though</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>0</td>
+      <td>1467815988</td>
+      <td>Mon Apr 06 22:21:09 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>merisssa</td>
+      <td>thought sleeping in was an option tomorrow but realizing that it now is not. evaluations in the morning and work in the afternoon!</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>0</td>
+      <td>1467816149</td>
+      <td>Mon Apr 06 22:21:11 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>Pbearfox</td>
+      <td>@julieebaby awe i love you too!!!! 1 am here  i miss you</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>0</td>
+      <td>1467816665</td>
+      <td>Mon Apr 06 22:21:21 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>jsoo</td>
+      <td>@HumpNinja I cry my asian eyes to sleep at night</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>0</td>
+      <td>1467816749</td>
+      <td>Mon Apr 06 22:21:20 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>scarletletterm</td>
+      <td>ok I'm sick and spent an hour sitting in the shower cause I was too sick to stand and held back the puke like a champ. BED now</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>0</td>
+      <td>1467817225</td>
+      <td>Mon Apr 06 22:21:27 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>crosland_12</td>
+      <td>@cocomix04 ill tell ya the story later  not a good day and ill be workin for like three more hours...</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>0</td>
+      <td>1467817374</td>
+      <td>Mon Apr 06 22:21:30 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>ajaxpro</td>
+      <td>@MissXu sorry! bed time came here (GMT+1)   http://is.gd/fNge</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>0</td>
+      <td>1467817502</td>
+      <td>Mon Apr 06 22:21:32 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>Tmttq86</td>
+      <td>@fleurylis I don't either. Its depressing. I don't think I even want to know about the kids in suitcases.</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>0</td>
+      <td>1467818007</td>
+      <td>Mon Apr 06 22:21:39 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>Anthony_Nguyen</td>
+      <td>Bed. Class 8-12. Work 12-3. Gym 3-5 or 6. Then class 6-10. Another day that's gonna fly by. I miss my girlfriend</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>0</td>
+      <td>1467818020</td>
+      <td>Mon Apr 06 22:21:39 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>itsanimesh</td>
+      <td>really don't feel like getting up today... but got to study to for tomorrows practical exam...</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>0</td>
+      <td>1467818481</td>
+      <td>Mon Apr 06 22:21:46 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>lionslamb</td>
+      <td>He's the reason for the teardrops on my guitar the only one who has enough of me to break my heart</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>0</td>
+      <td>1467818603</td>
+      <td>Mon Apr 06 22:21:49 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>kennypham</td>
+      <td>Sad, sad, sad. I don't know why but I hate this feeling  I wanna sleep and I still can't!</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>0</td>
+      <td>1467818900</td>
+      <td>Mon Apr 06 22:21:53 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>DdubsShellBell</td>
+      <td>@JonathanRKnight Awww I soo wish I was there to see you finally comfortable! Im sad that I missed it</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>0</td>
+      <td>1467819022</td>
+      <td>Mon Apr 06 22:21:56 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>hpfangirl94</td>
+      <td>Falling asleep. Just heard about that Tracy girl's body being found. How sad  My heart breaks for that family.</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>0</td>
+      <td>1467819650</td>
+      <td>Mon Apr 06 22:22:05 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>antzpantz</td>
+      <td>@Viennah Yay! I'm happy for you with your job! But that also means less time for me and you...</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>0</td>
+      <td>1467819712</td>
+      <td>Mon Apr 06 22:22:06 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>labrt2004</td>
+      <td>Just checked my user timeline on my blackberry, it looks like the twanking is still happening  Are ppl still having probs w/ BGs and UIDs?</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>0</td>
+      <td>1467819812</td>
+      <td>Mon Apr 06 22:22:07 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>IrisJumbe</td>
+      <td>Oh man...was ironing @jeancjumbe's fave top to wear to a meeting. Burnt it</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>0</td>
+      <td>1467820206</td>
+      <td>Mon Apr 06 22:22:13 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>peacoats</td>
+      <td>is strangely sad about LiLo and SamRo breaking up.</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>0</td>
+      <td>1467820835</td>
+      <td>Mon Apr 06 22:22:25 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>cyantist</td>
+      <td>@tea oh! i'm so sorry  i didn't think about that before retweeting.</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>0</td>
+      <td>1467820863</td>
+      <td>Mon Apr 06 22:22:23 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>tautao</td>
+      <td>Broadband plan 'a massive broken promise' http://tinyurl.com/dcuc33 via www.diigo.com/~tautao Still waiting for broadband we are</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>0</td>
+      <td>1467820906</td>
+      <td>Mon Apr 06 22:22:24 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>voyage2k</td>
+      <td>@localtweeps Wow, tons of replies from you, may have to unfollow so I can see my friends' tweets, you're scrolling the feed a lot.</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>0</td>
+      <td>1467821085</td>
+      <td>Mon Apr 06 22:22:26 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>crzy_cdn_bulas</td>
+      <td>our duck and chicken are taking wayyy too long to hatch</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>0</td>
+      <td>1467821338</td>
+      <td>Mon Apr 06 22:22:30 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>justnetgirl</td>
+      <td>Put vacation photos online a few yrs ago. PC crashed, and now I forget the name of the site.</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>0</td>
+      <td>1467821455</td>
+      <td>Mon Apr 06 22:22:32 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>CiaraRenee</td>
+      <td>I need a hug</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>0</td>
+      <td>1467821715</td>
+      <td>Mon Apr 06 22:22:37 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>deelau</td>
+      <td>@andywana Not sure what they are, only that they are PoS! As much as I want to, I dont think can trade away company assets sorry andy!</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>0</td>
+      <td>1467822384</td>
+      <td>Mon Apr 06 22:22:47 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>Lindsey0920</td>
+      <td>@oanhLove I hate when that happens...</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>0</td>
+      <td>1467822389</td>
+      <td>Mon Apr 06 22:22:47 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>HybridMink</td>
+      <td>I have a sad feeling that Dallas is not going to show up  I gotta say though, you'd think more shows would use music from the game. mmm</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>0</td>
+      <td>1467822519</td>
+      <td>Mon Apr 06 22:22:49 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>gzacher</td>
+      <td>Ugh....92 degrees tomorrow</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>0</td>
+      <td>1467822522</td>
+      <td>Mon Apr 06 22:22:49 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>Jenn_L</td>
+      <td>Where did u move to?  I thought u were already in sd. ?? Hmmm. Random u found me. Glad to hear yer doing well.</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>0</td>
+      <td>1467822687</td>
+      <td>Mon Apr 06 22:22:52 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>xVivaLaJuicyx</td>
+      <td>@BatManYNG I miss my ps3, it's out of commission  Wutcha playing? Have you copped 'Blood On The Sand'?</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>0</td>
+      <td>1467822918</td>
+      <td>Mon Apr 06 22:22:55 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>krbleyle</td>
+      <td>just leaving the parking lot of work!</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>0</td>
+      <td>1467823437</td>
+      <td>Mon Apr 06 22:23:03 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>xpika</td>
+      <td>The Life is cool. But not for Me.</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>0</td>
+      <td>1467823770</td>
+      <td>Mon Apr 06 22:23:08 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>Henkuyinepu</td>
+      <td>Sadly though, I've never gotten to experience the post coitus cigarette before, and now I never will.</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>0</td>
+      <td>1467823851</td>
+      <td>Mon Apr 06 22:23:09 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>ericg622</td>
+      <td>I had such a nice day. Too bad the rain comes in tomorrow at 5am</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>0</td>
+      <td>1467824199</td>
+      <td>Mon Apr 06 22:23:15 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>adri_mane</td>
+      <td>@Starrbby too bad I won't be around I lost my job and can't even pay my phone bill lmao aw shucks</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>0</td>
+      <td>1467824664</td>
+      <td>Mon Apr 06 22:23:23 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>a_mariepyt</td>
+      <td>Damm back to school tomorrow</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>0</td>
+      <td>1467824967</td>
+      <td>Mon Apr 06 22:23:28 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>playboybacon</td>
+      <td>Mo jobs, no money.  how in the hell is min wage here 4 f'n clams an hour?</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>0</td>
+      <td>1467825003</td>
+      <td>Mon Apr 06 22:23:28 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>leslierosales</td>
+      <td>@katortiz  Not forever... See you soon!</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>0</td>
+      <td>1467825084</td>
+      <td>Mon Apr 06 22:23:30 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>PresidentSnow</td>
+      <td>@Lt_Algonquin agreed, I saw the failwhale allllll day today.</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>0</td>
+      <td>1467825411</td>
+      <td>Mon Apr 06 22:23:35 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>michrod</td>
+      <td>@jdarter Oh! Haha... dude I dont really look at em unless someone says HEY I ADDED YOU. Sorry  I'm so terrible at that. I need a pop up!</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>0</td>
+      <td>1467825642</td>
+      <td>Mon Apr 06 22:23:39 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>timmelko</td>
+      <td>@ninjen I'm sure you're right...    I need to start working out with you and the Nikster... Or Jared at least!</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>0</td>
+      <td>1467825863</td>
+      <td>Mon Apr 06 22:23:43 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>BrookeAmanda</td>
+      <td>i really hate how people diss my bands!  Trace is clearly NOT ugly!</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>0</td>
+      <td>1467825883</td>
+      <td>Mon Apr 06 22:23:43 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>deelau</td>
+      <td>Gym attire today was: Puma singlet, Adidas shorts.......and black business socks and leather shoes  Lucky did not run into any cute girls.</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>0</td>
+      <td>1467826052</td>
+      <td>Mon Apr 06 22:23:45 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>paulseverio</td>
+      <td>Why won't you show my location?!   http://twitpic.com/2y2es</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>0</td>
+      <td>1467833672</td>
+      <td>Mon Apr 06 22:25:44 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>iv3tte</td>
+      <td>No picnic  my phone smells like citrus.</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>0</td>
+      <td>1467833690</td>
+      <td>Mon Apr 06 22:25:44 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>fedunska</td>
+      <td>@ashleyac My donkey is sensitive about such comments. Nevertheless, he'd (and me'd) be glad to see your mug asap. Charger is still awol.</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>0</td>
+      <td>1467833736</td>
+      <td>Mon Apr 06 22:25:45 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>MagicalMason</td>
+      <td>No new csi tonight.  FML</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>0</td>
+      <td>1467833799</td>
+      <td>Mon Apr 06 22:25:46 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>kaelaaa</td>
+      <td>i think my arms are sore from tennis</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>0</td>
+      <td>1467834001</td>
+      <td>Mon Apr 06 22:25:49 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>emo_holic</td>
+      <td>wonders why someone that u like so much can make you so unhappy in a split seccond . depressed .</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>0</td>
+      <td>1467834053</td>
+      <td>Mon Apr 06 22:25:52 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>thelazyboy</td>
+      <td>sleep soon... i just hate saying bye and see you tomorrow for the night.</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>0</td>
+      <td>1467834227</td>
+      <td>Mon Apr 06 22:25:53 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>driveaway2008</td>
+      <td>@statravelAU just got ur newsletter, those fares really are unbelievable, shame I already booked and paid for mine</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>0</td>
+      <td>1467834239</td>
+      <td>Mon Apr 06 22:25:53 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>mscha</td>
+      <td>missin' the boo</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>0</td>
+      <td>1467834265</td>
+      <td>Mon Apr 06 22:25:54 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>mike_webster_au</td>
+      <td>@markhardy1974 Me too  #itm</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>0</td>
+      <td>1467834284</td>
+      <td>Mon Apr 06 22:25:54 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>basiabeans</td>
+      <td>Damn... I don't have any chalk! MY CHALKBOARD IS USELESS</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>0</td>
+      <td>1467834400</td>
+      <td>Mon Apr 06 22:25:56 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>calihonda2001</td>
+      <td>had a blast at the Getty Villa, but hates that she's had a sore throat all day. It's just getting worse too</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>0</td>
+      <td>1467834817</td>
+      <td>Mon Apr 06 22:26:02 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>djwayneski</td>
+      <td>@msdrama hey missed ya at the meeting  sup mama</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>0</td>
+      <td>1467835085</td>
+      <td>Mon Apr 06 22:26:06 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>Ceejison</td>
+      <td>My tummy hurts.  I wonder if the hypnosis has anything to do with it? If so, it's working, I get it, STOP SMOKING!!!</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>0</td>
+      <td>1467835198</td>
+      <td>Mon Apr 06 22:26:08 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>ItsBrigittaYo</td>
+      <td>why is it always the fat ones?!</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>0</td>
+      <td>1467835305</td>
+      <td>Mon Apr 06 22:26:10 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>MissLaura317</td>
+      <td>@januarycrimson Sorry, babe!!  My fam annoys me too. Thankfully, they're asleep right now. Muahaha. *evil laugh*</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>0</td>
+      <td>1467835345</td>
+      <td>Mon Apr 06 22:26:10 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>RU_it_girl</td>
+      <td>@Hollywoodheat I should have paid more attention when we covered photoshop in my webpage design class in undergrad</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>0</td>
+      <td>1467835577</td>
+      <td>Mon Apr 06 22:26:14 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>viviana09</td>
+      <td>wednesday my b-day! don't know what 2 do!!</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>0</td>
+      <td>1467835880</td>
+      <td>Mon Apr 06 22:26:18 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>disneyfan4eva</td>
+      <td>Poor cameron (the hills)</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>0</td>
+      <td>1467836024</td>
+      <td>Mon Apr 06 22:26:21 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>RoseMaryK</td>
+      <td>pray for me please, the ex is threatening to start sh** at my/our babies 1st Birthday party. what a jerk. and I still have a headache</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>0</td>
+      <td>1467836111</td>
+      <td>Mon Apr 06 22:26:22 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>perrohunter</td>
+      <td>@makeherfamous hmm  , do u really enjoy being with him ? if the problems are too constants u should think things more , find someone ulike</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>0</td>
+      <td>1467836448</td>
+      <td>Mon Apr 06 22:26:27 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>Dogbook</td>
+      <td>Strider is a sick little puppy  http://apps.facebook.com/dogbook/profile/view/5248435</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>0</td>
+      <td>1467836500</td>
+      <td>Mon Apr 06 22:26:28 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>natalieantipas</td>
+      <td>so rylee,grace...wana go steve's party or not?? SADLY SINCE ITS EASTER I WNT B ABLE 2 DO MUCH  BUT OHH WELL.....</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>0</td>
+      <td>1467836576</td>
+      <td>Mon Apr 06 22:26:29 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>timdonnelly</td>
+      <td>hey, I actually won one of my bracket pools! Too bad it wasn't the one for money</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>0</td>
+      <td>1467836583</td>
+      <td>Mon Apr 06 22:26:29 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>homeworld</td>
+      <td>@stark YOU don't follow me, either  and i work for you!</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>0</td>
+      <td>1467836859</td>
+      <td>Mon Apr 06 22:26:33 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>willy_chaz</td>
+      <td>A bad nite for the favorite teams: Astros and Spartans lose.  The nite out with T.W. was good.</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>0</td>
+      <td>1467836873</td>
+      <td>Mon Apr 06 22:26:33 PDT 2009</td>
+      <td>NO_QUERY</td>
+      <td>LeakySpoon</td>
+      <td>Body Of Missing Northern Calif. Girl Found: Police have found the remains of a missing Northern California girl .. http://tr.im/imji</td>
+    </tr>
+  </tbody>
+</table>
+                  </body>
+                
+                

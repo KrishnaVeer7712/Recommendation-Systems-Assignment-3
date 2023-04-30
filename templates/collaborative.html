@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Collaborative</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <!-- <link rel="stylesheet" href="{{url_for('static',filename='css/slick.css')}}"> -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/tooplate-simply-amazed.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='fontawesome/css/all.min.css')}}">   
+</head>
+
+<body>
+
+       <main>
+
+
+            <section class="gallery-section section parallax-window" data-parallax="scroll" data-image-src="{{url_for('static',filename='img/animes.jpg')}}" id="section-3">
+                <div class="container">
+                    <div class="item" style="margin-bottom: 0;">
+                        <div class="bg-blue-transparent logo-fa" style="background-color: #887aac; opacity: 0.8;"> 
+                            <p align="center" style="font-size:25px; font-family:sans-serif; color:#FFF; padding-top: 15px; padding-bottom: 15px;">
+                                Anime
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div align="center" class="mx-auto gallery-slider" >
+                        <figure class="effect-julia item">
+                            <img src="{{url_for('static',filename='img/1.png')}}" alt="Image">
+                            <a href="{{ url_for('collaborative1') }}"><img src="{{url_for('static',filename='img/6.png')}}"></a>
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">202211025 <br>Aayushi Patel</div>
+                        </figure>
+                        <figure class="effect-julia item">
+                            <img src="{{url_for('static',filename='img/7.png')}}" alt="Image">
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">202211049 <br>Madhavi Aghera</div>
+                        </figure>  
+                        <figure class="effect-julia item">
+                            <img src="{{url_for('static',filename='img/8.png')}}" alt="Image">
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">202211025 <br>Aayushi Patel</div>
+                        </figure>
+                        <figure class="effect-julia item">
+                            <img src="{{url_for('static',filename='img/9.png')}}" alt="Image">
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">202211049 <br>Madhavi Aghera</div>
+                        </figure>                      
+                        
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+
+    <script src="{{url_for('static',filename='js/jquery-3.3.1.min.js')}}" ></script>
+    <script src="{{url_for('static',filename='js/bootstrap.bundle.min.js')}}" ></script>
+    <script src="{{url_for('static',filename='js/jquery.singlePageNav.min.js')}}" ></script>
+    <script src="{{url_for('static',filename='js/slick.js')}}" ></script>
+    <script src="{{url_for('static',filename='js/parallax.min.js')}}" ></script>
+    <script src="{{url_for('static',filename='js/templatemo-script.js')}}" ></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+
+<head>
+  <meta charset="UTF-8">
+  <title>Recommendation System</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+  <!-- <link rel="stylesheet" href="{{url_for('static',filename='css/slick.css')}}"> -->
+  <link rel="stylesheet" href="{{url_for('static',filename='css/tooplate-simply-amazed.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='fontawesome/css/all.min.css')}}">
+
+</head>
+
+<body>
+
+  <div class="login">
+
+
+    <section class="gallery-section section parallax-window" data-parallax="scroll"
+      data-image-src="{{url_for('static',filename='img/anime3.jpg')}}" id="section-3">
+      <div class="container">
+        <div class="item" style="margin-bottom: 0;">
+      
+          <div class="bg-blue-transparent logo-fa" style="background-color: #887aac; opacity: 0.8;">
+            <p align="center"
+              style="font-size:25px; font-family:sans-serif; color:#FFF; padding-top: 15px; padding-bottom: 15px;">
+              Anime Recommendation system
+            </p>
+          </div>
+          <form action="{{ url_for('recommend')}}" method="post">
+            <input type="integer" name="top anime" placeholder="key" required="required" />
+          </form>
+          <br>
+          <a href="{{ url_for('content_based1', id=0) }}"><button>Content Based Recommendations</button></a>
+          <br>
+          <a href="{{ url_for('collaborative_knn') }}"><button>Collaborative Filtering using KNN as Cosine Similarity</button></a>
+          <br>
+          <a href="{{ url_for('svd') }}"><button>Recommendations based on Matrix Factorization</button></a>
+          <br>
+          <div class="bg-blue-transparent logo-fa" style="background-color: #887aac; opacity: 0.8;">
+
+            <h2 style="font-size:25px; font-family:sans-serif; color:#FFF; padding-top: 15px; padding-bottom: 15px;">
+              Top 10 Anime based on rating counts:</h2>
+            <br>
+            <h5 style="font-size:25px; font-family:sans-serif; color:#FFF; padding-top: 15px; padding-bottom: 15px;">
+              {{ prediction_text1}}</h5>
+            <br>
+            <h2 style="font-size:25px; font-family:sans-serif; color:#FFF; padding-top: 15px; padding-bottom: 15px;">
+              Top 10 Anime based on Community size: </h2>
+            <h5 style="font-size:25px; font-family:sans-serif; color:#FFF; padding-top: 15px; padding-bottom: 15px;">
+              {{ prediction_text2}}</h5>
+            <br>
+            <h5 style="font-size:25px; font-family:sans-serif; color:#FFF; padding-top: 15px; padding-bottom: 15px;">
+              {{ prediction_text3}}</h5>
+            <!-- 
+              <h5 style="font-size:25px; font-family:sans-serif; color:#FFF; padding-top: 15px; padding-bottom: 15px;">
+                {{ prediction_text4}}</h5>
+
+              <h5 style="font-size:25px; font-family:sans-serif; color:#FFF; padding-top: 15px; padding-bottom: 15px;">
+                {{ prediction_text5}}</h5>
+
+              <h5 style="font-size:25px; font-family:sans-serif; color:#FFF; padding-top: 15px; padding-bottom: 15px;">
+                {{ prediction_text6}}</h5>
+
+              <h5 style="font-size:25px; font-family:sans-serif; color:#FFF; padding-top: 15px; padding-bottom: 15px;">
+                {{ prediction_text7}}</h5>
+
+              <h5 style="font-size:25px; font-family:sans-serif; color:#FFF; padding-top: 15px; padding-bottom: 15px;">
+                {{ prediction_text8}}</h5>
+
+              <h5 style="font-size:25px; font-family:sans-serif; color:#FFF; padding-top: 15px; padding-bottom: 15px;">
+                {{ prediction_text9}}</h5>
+
+              <h5 style="font-size:25px; font-family:sans-serif; color:#FFF; padding-top: 15px; padding-bottom: 15px;">
+                {{ prediction_text10}}</h5>
+
+              <h5 style="font-size:25px; font-family:sans-serif; color:#FFF; padding-top: 15px; padding-bottom: 15px;">
+                {{ prediction_text11}}</h5> -->
+
+
+          </div>
+        </div>
+      </div>
+
+  </div>
+  </section>
+
+
+  <script src="{{url_for('static',filename='js/jquery-3.3.1.min.js')}}"></script>
+  <script src="{{url_for('static',filename='js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('static',filename='js/jquery.singlePageNav.min.js')}}"></script>
+  <script src="{{url_for('static',filename='js/slick.js')}}"></script>
+  <script src="{{url_for('static',filename='js/parallax.min.js')}}"></script>
+  <script src="{{url_for('static',filename='js/templatemo-script.js')}}"></script>
+
+</body>
+
+</html>

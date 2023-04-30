@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>KINTSUGI</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/select2-bootstrap.css')}}">
+<!--    <link href="https://select2.github.io/select2-bootstrap-theme/css/select2-bootstrap.css" rel="stylesheet" />-->
+    <meta charset="UTF-8">
+    <style>
+        @charset "UTF-8";
+        @import url(https://fonts.googleapis.com/css?family=Oswald|Roboto);
+        body {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            font-family: "Roboto", sans-serif;
+            background-color: #fff;
+            overflow: hidden;
+        }
+        
+        .table {
+            display: table;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .table-cell {
+            display: table-cell;
+            vertical-align: middle;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+        
+        .container {
+            position: relative;
+            width: 850px;
+            margin: 30px auto 0;
+            height: 320px;
+            background-color: #5356ad;
+            top: 50%;
+            margin-top: -160px;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+        
+        .container .box {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .container .box:before,
+        .container .box:after {
+            content: " ";
+            position: absolute;
+            left: 152px;
+            top: 50px;
+            background-color: #5356ad;
+            transform: rotateX(52deg) rotateY(15deg) rotateZ(-38deg);
+            width: 300px;
+            height: 285px;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+        
+        .container .box:after {
+            background-color: #5356ad;
+            top: -10px;
+            left: 80px;
+            width: 320px;
+            height: 180px;
+        }
+        
+        .container .container-forms {
+            position: relative;
+        }
+        
+        .container .btn2,
+        .container .btn {
+            cursor: pointer;
+            text-align: center;
+            margin: 0 auto;
+            padding: 15px 32px;
+            border-radius: 8px;
+            width: 90px;
+            color: #fff;
+            background-color: #5356ad;
+            opacity: 1;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+        
+        .container .btn2:hover,
+        .container .btn:hover {
+            opacity: 0.7;
+        }
+        
+        .container .btn2,
+        .container .btn,
+        .container input {
+            padding: 10px 15px;
+        }
+        
+        .container input {
+            margin: 0 auto 15px;
+            display: block;
+            width: 220px;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .container select {
+            margin: 0 auto 15px;
+            display: block;
+            width: 220px;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        
+        .container .container-forms .container-info {
+            text-align: left;
+            font-size: 0;
+        }
+        
+        .container .container-forms .container-info .info-item {
+            text-align: center;
+            font-size: 16px;
+            width: 300px;
+            height: 320px;
+            display: inline-block;
+            vertical-align: top;
+            color: #fff;
+            opacity: 1;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        
+        .container .container-forms .container-info .info-item p {
+            font-size: 20px;
+            margin: 20px;
+        }
+        
+        .container .container-forms .container-info .info-item .btn2,
+        .container .container-forms .container-info .info-item .btn {
+            background-color: transparent;
+            border: 1px solid #fff;
+        }
+        
+        .container .container-forms .container-info .info-item .table-cell {
+            padding-right: 35px;
+        }
+        
+        .container .container-forms .container-info .info-item:nth-child(2) .table-cell {
+            padding-left: 35px;
+            padding-right: 0;
+        }
+        
+        .container .container-form {
+            overflow: hidden;
+            position: absolute;
+            left: 30px;
+            top: -30px;
+            width: 305px;
+            height: 380px;
+            background-color: #fff;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+        
+        .container .container-form:before {
+            content: "✔";
+            position: absolute;
+            left: 160px;
+            top: -50px;
+            color: #5356ad;
+            font-size: 130px;
+            opacity: 0;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+        
+        .container .container-form .btn2,
+        .container .container-form .btn {
+            position: relative;
+            box-shadow: 0 0 10px 1px #5356ad;
+            margin-top: 30px;
+        }
+        
+        .container .form-item {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+        
+        .container .form-item.sign-up {
+            position: absolute;
+            left: -100%;
+            opacity: 0;
+        }
+        
+        .container.log-in .box:before {
+            position: absolute;
+            left: 180px;
+            top: 62px;
+            height: 265px;
+        }
+        
+        .container.log-in .box:after {
+            top: 22px;
+            left: 192px;
+            width: 324px;
+            height: 220px;
+        }
+        
+        .container.log-in .container-form {
+            left: 265px;
+        }
+        
+        .container.log-in .container-form .form-item.sign-up {
+            left: 0;
+            opacity: 1;
+        }
+        
+        .container.log-in .container-form .form-item.log-in {
+            left: -100%;
+            opacity: 0;
+        }
+        
+        .container.active {
+            width: 260px;
+            height: 140px;
+            margin-top: -70px;
+        }
+        
+        .container.active .container-form {
+            left: 30px;
+            width: 200px;
+            height: 200px;
+        }
+        
+        .container.active .container-form:before {
+            content: "✔";
+            position: absolute;
+            left: 51px;
+            top: 5px;
+            color: #5356ad;
+            font-size: 130px;
+            opacity: 1;
+        }
+
+        .container.active input,
+        .container.active .btn2,
+        .container.active .btn,
+        .container.active .info-item {
+            display: none;
+            opacity: 0;
+            padding: 0px;
+            margin: 0 auto;
+            height: 0;
+        }
+        
+        .container.active .form-item {
+            height: 100%;
+        }
+        
+        .container.active .container-forms .container-info .info-item {
+            height: 0%;
+            opacity: 0;
+        }
+
+        .information{
+            display: None;
+            background: #fff;
+            border: 5px;
+            width: 299.04px;
+            color:#000000;
+            margin-left: 400px;
+            position:absolute;
+            top: 80px;
+            padding:25px;
+            border-radius: 3px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .select2-container--open .select2-selection {
+            box-shadow: none!important;
+        }
+
+        .select2-container--open .select2-selection .select2-selection__arrow {
+            z-index: 9999; /* example */
+        }
+
+    .select2-dropdown {
+      /* .box-shadow(@form-control-focus-box-shadow); */
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+
+
+      /* !important not needed with less */
+      border-top-width: 1px!important;
+      border-top-style: solid!important;
+
+
+      /* margin-top: -@input-height-base; */
+      margin-top: -41px!important;
+      margin-left: 42px;
+      width: 220px !important;
+    }
+
+    .select2-dropdown .select2-search {
+        padding: 0;
+    }
+
+    .select2-dropdown .select2-search .select2-search__field {
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      border-radius: 0;
+
+      /* padding: @padding-base-vertical @padding-base-horizontal; */
+      padding: 20px 12px;
+
+      /* height: calc(@input-height-base - 1px); */
+      height: 40.8px;
+    }
+
+
+
+    .select2-dropdown.select2-dropdown--above .select2-search .select2-search__field {
+      /* border-top: 1px solid @input-border; */
+      border-top: 1px solid #66afe9;
+      border-bottom: 0;
+    }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- <form action="{{ url_for('predict')}}"method="post">    -->
+    <!-- partial:index.partial.html -->
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary" style="z-index:1; position:relative">
+          <i class="fa fa-bars"></i>
+          <span class="sr-only">Toggle Menu</span>
+        </button>
+            </div>
+            <div class="p-4 pt-5">
+                <h2><a class="logo">KINTSUGI</a></h2>
+                <ul class="list-unstyled components mb-5">
+                    <li style="margin-top:6px;">
+                            <a href="/">Home</a>
+                        </li>   
+                    <li  class="active" style="margin-top:6px;">
+                        <a href="/prediction">Prediction</a>
+                    </li>
+                    <li style="margin-top:6px;">
+                        <a href="/data_preview">Data Preview</a>
+                    </li>
+                    <li style="margin-top:6px;">
+                        <a href="/about">About</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5 pt-5">
+
+
+            <div class="container">
+                <div class="container-forms">
+                    <form action="/predict" method="post">
+                        <div class="container-form">
+                            <div class="form-item log-in">
+                                <div class="table">
+                                    <div class="table-cell">
+                                      
+
+                                        <center><h5>Your Thought, Please!!</h5></center>
+                                        <input name="desc" id="inputDesc" placeholder="Enter Text" type="text" onclick="descinfo()" required/>
+                                        <center><button type="submit" name="submit" style="border:0;" class="btn"> Predict </button></center>
+                                    </div>
+                                </div>
+                            </div>
+                    </form>
+                    <div class="form-item sign-up">
+                        <div class="table">
+                            <div class="table-cell">
+                                <center>
+                                    <h4>Your Input</h4>
+                                    <p> Thought: {{thought}}</p>
+
+                                    <h4>Prediction</h4>
+                                    <p> Result: {{result}}</p>
+                                    
+                                </center>
+                                
+                                <div class="btn2" style="width:110px;">
+                                    New Prediction
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+                <div class="information"><p id="info"></p></div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.full.min.js"></script>
+    <script>
+    $(".project").select2({
+        placeholder: "Enter Project Name"
+    });
+
+    var elements = $(document).find('select.form-control');
+    for (var i = 0, l = elements.length; i < l; i++) {
+    var $select = $(elements[i]), $label = $select.parents('.form-group').find('label');
+    $select.select2({
+        allowClear: false,
+        placeholder: $select.data('placeholder'),
+        minimumResultsForSearch: 0,
+        theme: 'bootstrap',
+            width: '100%' // https://github.com/select2/select2/issues/3278
+    });
+
+
+    
+
+
+  // Trigger focus
+  $label.on('click', function (e) {
+    $(this).parents('.form-group').find('select').trigger('focus').select2('focus');
+  });
+
+
+  // Trigger search
+  $select.on('keydown', function (e) {
+    var $select = $(this), $select2 = $select.data('select2'), $container = $select2.$container;
+
+
+    // Unprintable keys
+    if (typeof e.which === 'undefined' || $.inArray(e.which, [0, 8, 9, 12, 16, 17, 18, 19, 20, 27, 33, 34, 35, 36, 37, 38, 39, 44, 45, 46, 91, 92, 93, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 123, 124, 144, 145, 224, 225, 57392, 63289]) >= 0) {
+      return true;
+    }
+
+    // Opened dropdown
+    if ($container.hasClass('select2-container--open')) {
+      return true;
+    }
+
+    $select.select2('open');
+
+    // Default search value
+    var $search = $select2.dropdown.$search || $select2.selection.$search, query = $.inArray(e.which, [13, 40, 108]) < 0 ? String.fromCharCode(e.which) : '';
+    if (query !== '') {
+      $search.val(query).trigger('keyup');
+    }
+  });
+
+  // Format, placeholder
+<!--  $select.on('select2:open', function (e) {-->
+<!--		var $select = $(this), $select2 = $select.data('select2'), $dropdown = $select2.dropdown.$dropdown || $select2.selection.$dropdown, $search = $select2.dropdown.$search || $select2.selection.$search, data = $select.select2('data');-->
+
+<!--    // Above dropdown-->
+<!--    if ($dropdown.hasClass('select2-dropdown&#45;&#45;above')) {-->
+<!--      $dropdown.append($search.parents('.select2-search&#45;&#45;dropdown').detach());-->
+<!--    }-->
+
+<!--    // Placeholder-->
+<!--    $search.attr('placeholder', (data[0].text !== '' ? data[0].text : $select.data('placeholder')));-->
+<!--  });-->
+
+}
+    </script>
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/popper.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/main.js')}}"></script>
+
+    <script>
+        function descinfo() {
+        document.getElementById("info").innerHTML = "Enter your Thought!! <br> i.e, I'm not feeling anything around me";
+        document.getElementsByClassName("information")[0].style.display = "block";
+        }
+    </script>
+
+    
+    <script>
+        var count = {{count}}
+        if (count == 1) {
+            $(".container").toggleClass("log-in");
+        }
+        $(".container-form .btn2").click(function() {
+            $(".container").toggleClass("log-in");
+        });
+    </script>
+<script>
+        if ( window.history.replaceState ) {
+
+          window.history.replaceState( null, null,"{{ url_for('home') }}");
+        }
+        </script>
+
+</body>
+
+</html>

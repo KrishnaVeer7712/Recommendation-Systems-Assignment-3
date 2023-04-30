@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>KINTSUGI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/slick.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/tooplate-simply-amazed.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='fontawesome/css/all.min.css')}}">   
+</head>
+
+<body>
+       <main>
+            <div class="banner-section section parallax-window" data-parallax="scroll" data-image-src="{{url_for('static',filename='img/section-1-bg.jpg')}}" id="section-1" style="padding:60px">
+                <div class="container">
+                    <div class="item">
+                        <div class="bg-blue-transparent logo-fa" style="background-color: #887aac; opacity: 0.8;"> What is Kintsugi?</div>
+                        <div class="bg-blue-transparent simple" style="background-color: #887aac; opacity: 0.8;"><p align="justify">Kintsugi, also known as kintsukuroi, is the Japanese art of repairing broken pottery by mending the areas of breakage with lacquer dusted or mixed with powdered gold, silver, or platinum. It is built on the idea that in embracing flaws and imperfections, you can create an even stronger, more beautiful piece of art. Using this as a metaphor for healing ourselves teaches us an important lesson: "Sometimes in the process of repairing things that have broken, we actually create something more unique, beautiful and resilient.<br>There are lots of effective treatments for depression. People can recover from depression and live long and healthy lives."</p></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            <section class="work-section section" id="section-2" style="background-color: #aa99d7;">
+                <div class="container" style="padding-top:0; margin-top:0;">
+                    <div class="title" style="margin-top:0">
+                        <h2>What is Depression?</h2>
+                    </div>
+                    <div class="row" style="margin-top:50px">
+
+                        <div style="background-color: #e7e2f5; opacity: 0.9; padding:35px; margin:auto; width: 86%;">
+                            <p align="justify" style="font-size:18px; font-family:sans-serif; color:#6C757D;">Depression is a common and serious medical illness that negatively affects how you feel, the way you think and how you act. Fortunately, it is also treatable. Depression causes feelings of sadness and/or a loss of interest in activities you once enjoyed. It can lead to a variety of emotional and physical problems and can decrease your ability to function at work and at home.
+                            </p>
+                        </div>
+                        <div style="background-color: #e7e2f5; opacity: 0.9; margin:auto; margin-top:50px;  padding:35px; width: 86%;">
+                            <p align="justify" style="font-size:18px; font-family:sans-serif; color:#6C757D;">
+                                Depression symptoms can vary from mild to severe and can include:
+                            </p>
+                            <ul>
+                                <li>Feeling sad or having a depressed mood</li>
+                                <li>Loss of interest or pleasure in activities once enjoyed</li>
+                                <li>Changes in appetite — weight loss or gain unrelated to dieting</li>
+                                <li>Trouble sleeping or sleeping too much</li>
+                                <li>Loss of energy or increased fatigue</li>
+                                <li>Increase in purposeless physical activity (e.g., inability to sit still, pacing, handwringing) or slowed movements or speech (these actions must be severe enough to be observable by others)</li>
+                                <li>Feeling worthless or guilty</li>
+                                <li>Difficulty thinking, concentrating or making decisions</li>
+                                <li>Thoughts of death or suicide</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <section class="gallery-section section parallax-window" data-parallax="scroll" data-image-src="{{url_for('static',filename='img/section-3-bg.jpg')}}" id="section-3">
+                <div class="container">
+                    <div class="item">
+                        <div class="bg-blue-transparent logo-fa" style="background-color: #887aac; opacity: 0.8; "> 
+                            <p align="center" style="font-size:25px; font-family:sans-serif; color:#FFF; padding-top: 15px; padding-bottom: 15px;">
+                                Types of Depression
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="mx-auto gallery-slider">
+                        <figure class="effect-julia item">
+                            <img src="{{url_for('static',filename='img/gallery-img-01(1).jpg')}}" alt="Image">
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">Major Depressive Disorder (MDD)</div>
+                            <figcaption>
+                                <a href="{{ url_for('depression_type') }}">View more</a>
+                            </figcaption>
+                        </figure>
+                        <figure class="effect-julia item">
+                            <img src="{{url_for('static',filename='img/gallery-img-02(1).jpg')}}" alt="Image">
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">Persistent Depressive Disorder (PDD)</div>
+                            <figcaption>
+                                <a href="{{ url_for('depression_type') }}">View more</a>
+                            </figcaption>
+                        </figure>
+                        <figure class="effect-julia item">
+                            <img src="{{url_for('static',filename='img/gallery-img-03(1).jpg')}}" alt="Image">
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">Bipolar<br> Disorder</div>
+                            <figcaption>
+                                <a href="{{ url_for('depression_type') }}">View more</a>
+                            </figcaption>
+                        </figure>
+                        <figure class="effect-julia item">
+                            <img src="{{url_for('static',filename='img/gallery-img-04(1).jpg')}}" alt="Image">
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">Postpartum Depression <br>(PPD)</div>
+                            <figcaption>
+                                <a href="{{ url_for('depression_type') }}">View more</a>
+                            </figcaption>
+                        </figure>
+                        <figure class="effect-julia item">
+                            <img src="{{url_for('static',filename='img/gallery-img-05(1).jpg')}}" alt="Image">
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">Premenstrual Dysphoric Disorder (PMDD)</div>
+                            <figcaption>
+                                <a href="{{ url_for('depression_type') }}">View more</a>
+                            </figcaption>
+                        </figure>
+                        <figure class="effect-julia item">
+                            <img src="{{url_for('static',filename='img/gallery-img-06(1).jpg')}}" alt="Image">
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">Seasonal Affective Disorder (SAD)</div>
+                            <figcaption>
+                                <a href="{{ url_for('depression_type') }}">View more</a>
+                            </figcaption>
+                        </figure>
+                        <figure class="effect-julia item">
+                            <img src="{{url_for('static',filename='img/gallery-img-07(1).jpg')}}" alt="Image">
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">Atypical <br>Depression<br></div>
+                            <figcaption>
+                                <a href="{{ url_for('depression_type') }}">View more</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section class="work-section section" id="section-4" style="background-color: #aa99d7;">
+                <div class="container" style="padding-top:0; margin-top:0;">
+                    <div class="title" style="margin-top:0">
+                        <h2>Depression Treatments</h2>
+                    </div>
+                    <div class="row" style="margin-top:50px">
+
+                        <div style="background-color: #e7e2f5; opacity: 0.9; padding:35px; margin:auto; width: 86%;">
+                            <p align="justify" style="font-size:18px; font-family:sans-serif; color:#6C757D;">Along with therapy and sometimes medication, there's a lot you can do on your own to fight back. Changing your behavior, your physical activity, lifestyle, and even your way of thinking are all natural depression treatments.
+                            </p>
+                        </div>
+                        <div style="background-color: #e7e2f5; opacity: 0.9; margin:auto; margin-top:50px;  padding:35px; width: 86%;">
+                            <p align="justify" style="font-size:18px; font-family:sans-serif; color:#6C757D;">
+                                These tips can help you feel better:
+                                <ul>
+                                    <li>Get in a routine</li>
+                                    <li>Set goals</li>
+                                    <li>Exercise</li>
+                                    <li>Eat healthy</li>
+                                    <li>Get enough sleep</li>
+                                    <li>Take on responsibilities</li>
+                                    <li>Challenge negative thoughts</li>
+                                    <li>Check with your doctor before using supplements</li>
+                                    <li>Do something new</li>
+                                    <li>Try to have fun</li>
+                                    <li>Avoid alcohol and other drugs</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="{{url_for('static',filename='js/jquery-3.3.1.min.js')}}" ></script>
+    <script src="{{url_for('static',filename='js/bootstrap.bundle.min.js')}}" ></script>
+    <script src="{{url_for('static',filename='js/jquery.singlePageNav.min.js')}}" ></script>
+    <script src="{{url_for('static',filename='js/slick.js')}}" ></script>
+    <script src="{{url_for('static',filename='js/parallax.min.js')}}" ></script>
+    <script src="{{url_for('static',filename='js/templatemo-script.js')}}" ></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Collaborative_KNN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <!-- <link rel="stylesheet" href="{{url_for('static',filename='css/slick.css')}}"> -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/tooplate-simply-amazed.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='fontawesome/css/all.min.css')}}">   
+</head>
+
+<body>
+
+       <main>
+
+
+            <section class="gallery-section section parallax-window" data-parallax="scroll" data-image-src="{{url_for('static',filename='img/animes.jpg')}}" id="section-3">
+                <div class="container">
+                    <div class="item" style="margin-bottom: 0;">
+                        <div class="bg-blue-transparent logo-fa" style="background-color: #887aac; opacity: 0.8;"> 
+                            <p align="center" style="font-size:25px; font-family:sans-serif; color:#FFF; padding-top: 15px; padding-bottom: 15px;">
+                                Animes Collaborative
+                            </p>
+                        </div>     
+                    </div>
+                    <div align="center" class="mx-auto gallery-slider" >
+                        <figure class="effect-julia item">
+                            <a><img src="{{url_for('static',filename='img/1.png')}}"></a>
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">{{ prediction_text1}}</div>
+                        </figure>
+                        <figure class="effect-julia item">
+                            <a><img src="{{url_for('static',filename='img/2.png')}}"></a>
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">{{ prediction_text2}}</div>
+                        </figure>  
+                        <figure class="effect-julia item">
+                            <a><img src="{{url_for('static',filename='img/3.png')}}"></a>
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">{{ prediction_text3}}</div>
+                        </figure>
+                        <figure class="effect-julia item">
+                            <a><img src="{{url_for('static',filename='img/4.png')}}"></a>
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">{{ prediction_text4}}</div>
+                        </figure> 
+                        
+                        <figure class="effect-julia item">
+                            <a><img src="{{url_for('static',filename='img/5.png')}}"></a>
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">{{ prediction_text5}}</div>
+                        </figure>
+                    </div>
+
+                    <div align="center" class="mx-auto gallery-slider" >
+                        <figure class="effect-julia item">
+                            <a><img src="{{url_for('static',filename='img/6.png')}}"></a>
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">{{ prediction_text6}}</div>
+                        </figure>
+                        <figure class="effect-julia item">
+                            <a><img src="{{url_for('static',filename='img/7.png')}}"></a>
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">{{ prediction_text7}}</div>
+                        </figure>  
+                        <figure class="effect-julia item">
+                            <a><img src="{{url_for('static',filename='img/8.png')}}"></a>
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">{{ prediction_text8}}</div>
+                        </figure>
+                        <figure class="effect-julia item">
+                            <a><img src="{{url_for('static',filename='img/9.png')}}"></a>
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">{{ prediction_text9}}</div>
+                        </figure> 
+                        
+                        <figure class="effect-julia item">
+                            <a><img src="{{url_for('static',filename='img/10.png')}}"></a>
+                            <div style="margin-top:10px; margin-bottom:10px; font-size:16px; color:#FFF;">{{ prediction_text10}}</div>
+                        </figure>
+                        
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+    </div>
+    
+
+    <script src="{{url_for('static',filename='js/jquery-3.3.1.min.js')}}" ></script>
+    <script src="{{url_for('static',filename='js/bootstrap.bundle.min.js')}}" ></script>
+    <script src="{{url_for('static',filename='js/jquery.singlePageNav.min.js')}}" ></script>
+    <script src="{{url_for('static',filename='js/slick.js')}}" ></script>
+    <script src="{{url_for('static',filename='js/parallax.min.js')}}" ></script>
+    <script src="{{url_for('static',filename='js/templatemo-script.js')}}" ></script>
+</body>
+</html>
